@@ -9,14 +9,14 @@ import Foundation
 
 import CommonCrypto
 
-enum CryptoError: Error {
+public enum CryptoError: Error {
     case encryptionFailed
     case decryptionFailed
     case invalidKeyLength
 }
 
-class AESCryptor {
-    static func encrypt(data: Data, key: Data, iv: Data, keySize: Int) throws -> Data {
+public class AESCryptor {
+    public static func encrypt(data: Data, key: Data, iv: Data, keySize: Int) throws -> Data {
         guard keySize == kCCKeySizeAES128 || keySize == kCCKeySizeAES256 else {
             throw CryptoError.invalidKeyLength
         }
@@ -50,7 +50,7 @@ class AESCryptor {
         return encryptedData
     }
 
-    static func decrypt(data: Data, key: Data, iv: Data, keySize: Int) throws -> Data {
+    public static func decrypt(data: Data, key: Data, iv: Data, keySize: Int) throws -> Data {
         guard keySize == kCCKeySizeAES128 || keySize == kCCKeySizeAES256 else {
             throw CryptoError.invalidKeyLength
         }

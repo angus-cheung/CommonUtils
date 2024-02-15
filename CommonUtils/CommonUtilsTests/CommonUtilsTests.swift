@@ -51,11 +51,18 @@ final class CommonUtilsTests: XCTestCase {
         }
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    func testDecryptWithValidInput() {
+        
+        let publicKey = "MEgCQQCo9+BpMRYQ/dL3DS2CyJxRF+j6ctbT3/Qp84+KeFhnii7NT7fELilKUSnxS30WAvQCCo2yU1orfgqr41mM70MBAgMBAAE="
+        let encryptedData = "odKAmV6AbsoWsyL3thUoYVDEJAsQl8RrH+JuQ9HWUnDLunDdLEM6oNl15XP1xLOHz3bEq1rvATiQmAByKNOiVujd1gsq7JxfQYDdHRzDhZZrUstnetvGTDBtMHmhzbBXOih+1q3eA2RMQ5izXOEkyMKrWWlcKMWVJzMSYjFeFJB8D8wJNmq1ArNCO3uXfwkZuMnMhYhx/OYvCs4sMWKe5/etyR2gz0Fvp6VDUa0jNRvoad+8/pHK7KDxB8nW5KgmpSjfkl1Ut3zChtwEuAFnSDuypbrODBdphZHD40WmX0f69VKKs44vsKCHr8nzJ8R5dw+2Ggyq5W5hl3PDTMTqn8Pc+cwmPdVe4bkNqxbCHe2omZXpNIgC31wrMBvkyUYvpY8rMoBXqgm9hC5JsXzn6Z6X1kpGFhDjkNSdzx4jYzw="
+        
+        // 使用上述 publicKey 和 encryptedData 進行解密測試
+        do {
+            let decryptedData = try RSACrypto.decrypt(publickeyStr: publicKey, encrypted: encryptedData)
+            XCTAssertNotNil(decryptedData, "Decryption should succeed with valid input")
+        } catch {
+            XCTFail("Unexpected error: \(error)")
         }
     }
-
+    
 }

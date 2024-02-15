@@ -11,6 +11,7 @@
 		92402C392B7DAF0F000F5FD7 /* AESCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92402C382B7DAF0F000F5FD7 /* AESCryptor.swift */; };
 		92402C412B7DAF7C000F5FD7 /* CommonUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92402C402B7DAF7C000F5FD7 /* CommonUtilsTests.swift */; };
 		92402C422B7DAF7C000F5FD7 /* CommonUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92402C2E2B7DAED3000F5FD7 /* CommonUtils.framework */; };
+		92402C492B7DB321000F5FD7 /* RSACryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92402C482B7DB321000F5FD7 /* RSACryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		92402C382B7DAF0F000F5FD7 /* AESCryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCryptor.swift; sourceTree = "<group>"; };
 		92402C3E2B7DAF7C000F5FD7 /* CommonUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92402C402B7DAF7C000F5FD7 /* CommonUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtilsTests.swift; sourceTree = "<group>"; };
+		92402C482B7DB321000F5FD7 /* RSACryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSACryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				92402C312B7DAED3000F5FD7 /* CommonUtils.h */,
 				92402C382B7DAF0F000F5FD7 /* AESCryptor.swift */,
+				92402C482B7DB321000F5FD7 /* RSACryptor.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92402C392B7DAF0F000F5FD7 /* AESCryptor.swift in Sources */,
+				92402C492B7DB321000F5FD7 /* RSACryptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
